@@ -1,6 +1,6 @@
 ﻿namespace LemonadeStand_3DayStarter
 {
-    class SugarCube : Invento
+    class SugarCube 
     {
         // member variables (HAS A)
 
