@@ -8,5 +8,14 @@ namespace LemonadeStand_3DayStarter
 {
     class Customer
     {
+        //Variable (Has a)
+
+        //Constructor
+        public Customer()
+        {
+
+        }
+
+        //Method (Can do)
     }
 }
