@@ -9,7 +9,9 @@ namespace LemonadeStand_3DayStarter
     class Customer
     {
         //Variable (Has a)
-
+        private List<string> names;
+        public string names;
+        
         //Constructor
         public Customer()
         {
