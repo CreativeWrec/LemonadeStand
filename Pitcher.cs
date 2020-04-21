@@ -6,12 +6,8 @@ using System.Threading.Tasks;
 
 namespace LemonadeStand_3DayStarter
 {
-    class Customer
+    class Pitcher
     {
-        public Customer()
-        {
-
-        }
-    }   
-
+        public int cupsLeftinPitcher;
+    }
 }
