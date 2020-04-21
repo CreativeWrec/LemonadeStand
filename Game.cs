@@ -36,7 +36,7 @@ namespace LemonadeStand_3DayStarter
         public Game()
         {
             player = new Player();
-            weather = new Weather(rng);
+            weather = new Weather();
             store = new Store();
             days = new List<Day>();
             rng = new Random();

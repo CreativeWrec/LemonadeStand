@@ -8,9 +8,13 @@ namespace LemonadeStand_3DayStarter
 {
     class Customer
     {
-        public Customer()
+        Random rng;
+        Wallet wallet;
+        public int tempeture;
+        public Customer(Random rng, int tempeture)
         {
-
+            this.tempeture = tempeture;
+            this.rng = rng;
         }
     }   
 
