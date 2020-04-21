@@ -8,14 +8,14 @@ namespace LemonadeStand_3DayStarter
 {
     class Customer
     {
-        Random rng;
-        Wallet wallet;
-        public int tempeture;
-        public Customer(Random rng, int tempeture)
+        private List<string> names;
+        public string name;
+        public Customer()
         {
-            this.tempeture = tempeture;
-            this.rng = rng;
+
         }
+
+        
     }   
 
 }

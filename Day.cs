@@ -11,6 +11,7 @@ namespace LemonadeStand_3DayStarter
         public Weather weather;
         public List<Customer> customers;
         public string dayOfWeek;
+        Random rng;
 
         public Day(string dayOfWeekPassed)
         {
@@ -21,11 +22,14 @@ namespace LemonadeStand_3DayStarter
 
         public void GenerateCustomers()
         {
-            //
             //gen a number
-
-            //user that number to run a for loop for value of the number
-            //in the for loop add new customer objects itno the customers list like I am doing on the game class for days
+            int randomNumber = rng.Next();
+            //use that number to run a for loop for value of the number
+            for (int i = 0; i > 100; i++)
+            {
+                customers.Add(new Customer(rng));
+            }
+            //in the for loop add new customer objects into the customers list like I am doing on the game class for days
         }
     }
 

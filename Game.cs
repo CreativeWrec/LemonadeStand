@@ -54,7 +54,7 @@ namespace LemonadeStand_3DayStarter
             List<string> dayNames = new List<string>() { "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday" };
             //generated random number
             
-            int randomIndex = rng.Next(0, 7);
+            int randomNumber = rng.Next(0, 7);
             for (int i = 0; i < 7; i++)
             {
                 days.Add(new Day(dayNames[i]));
