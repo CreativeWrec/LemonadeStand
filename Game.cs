@@ -59,11 +59,10 @@ namespace LemonadeStand_3DayStarter
                     GoToStore();
                     break;
                 case "2":
-                    //player.recipe.SetRecipe();
+                    player.recipe.SetRecipe();
                     break;
                 case "3":
-                    //DisplayInventory();
-                    //player.inventory.lemons.Count 
+                    player.inventory.DisplayInventory();
                     break;
                 case "4":
                     DisplayForecast();

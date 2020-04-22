@@ -17,6 +17,9 @@ namespace LemonadeStand_3DayStarter
         }
 
 
+        //MakeBuyChoice(Weather weather, Recipe recipe)
+
+        //try to think of way to use the varaiables on the weather and recipe to generate a chance that the customer will buy or not
 
 
 
