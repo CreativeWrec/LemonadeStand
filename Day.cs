@@ -13,8 +13,10 @@ namespace LemonadeStand_3DayStarter
         public string dayOfWeek;
         Random rng;
 
-        public Day(string dayOfWeekPassed)
+        public Day(string dayOfWeekPassed, Random random)
         {
+            rng = random;
+            weather = new Weather(rng);
             customers = new List<Customer>();
             dayOfWeek = dayOfWeekPassed;
         }

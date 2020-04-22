@@ -10,10 +10,15 @@ namespace LemonadeStand_3DayStarter
     {
         private List<string> names;
         public string name;
-        public Customer()
+        Random random;
+        public Customer(Random rng)
         {
-
+            random = rng;
         }
+
+
+
+
 
         
     }   

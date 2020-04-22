@@ -18,8 +18,8 @@ namespace LemonadeStand_3DayStarter
         //Display daily profit or loss & total profit or loss at the end of each day                                                                    [Day]+
         //Implement SOLID principles so that C# best practices are shown                                                                                [Principal]
         //Pinpoint two places where I used two SOLID principles & discuss its reasoning.                                                                [Principal]
-        
-            ///Bonus Points///
+
+        ///Bonus Points///
         //Make game playable up to 4 players (HvH, HvC)
         //Have ability to save game data that can be accessed after the app is closed
         //Have ability to to register & login to play with individual save file
@@ -29,14 +29,12 @@ namespace LemonadeStand_3DayStarter
         public Player player;
         public List<Day> days;
         public Store store;
-        public Weather weather;
         public Random rng;
 
         //Construtor
         public Game()
         {
             player = new Player();
-            weather = new Weather();
             store = new Store();
             days = new List<Day>();
             rng = new Random();
@@ -45,7 +43,41 @@ namespace LemonadeStand_3DayStarter
         }
         public void RunGame()
         {
+            foreach(Day day in days)
+            {
+                Menu(day);
+            }
+        }
 
+        public void Menu(Day day)
+        {
+            Console.WriteLine("<><><> Game Menu <><><>\n1) Go To Store\n2) Set Recipe\n3) Check Inventory\n4) View Forecast\n5) Start Day\n6) Exit Game");
+            string userInput = Console.ReadLine();
+            switch (userInput)
+            {
+                case "1":
+                    GoToStore();
+                    break;
+                case "2":
+                    //player.recipe.SetRecipe();
+                    break;
+                case "3":
+                    //DisplayInventory();
+                    //player.inventory.lemons.Count 
+                    break;
+                case "4":
+                    DisplayForecast();
+                    break;
+                case "5":
+                    //StartDay(day);
+                    break;
+                case "6":
+                    Environment.Exit(0);
+                    break;
+                default:
+                    Menu(day);
+                    break;
+            }
         }
 
         //Method (Can do)
@@ -53,14 +85,22 @@ namespace LemonadeStand_3DayStarter
         {
             List<string> dayNames = new List<string>() { "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday" };
             //generated random number
-            
+
             int randomNumber = rng.Next(0, 7);
             for (int i = 0; i < 7; i++)
             {
-                days.Add(new Day(dayNames[i]));
+                days.Add(new Day(dayNames[i], rng));
             }
 
-            
+
+        }
+
+        public void DisplayForecast()
+        {
+            foreach (Day day in days)
+            {
+                Console.WriteLine("Forecast For Day " + day.weather.condition + " " + day.weather.tempurture);
+            }
         }
 
         public void GoToStore()
@@ -74,10 +114,8 @@ namespace LemonadeStand_3DayStarter
                 store.SellIceCubes(player);
                 store.SellSugarCubes(player);
             }
-            else
-            {
 
-            }
         }
+      
     }
 }

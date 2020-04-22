@@ -15,17 +15,19 @@ namespace LemonadeStand_3DayStarter
         public Random rng;
 
         // constructor (SPAWNER)
-        public Weather()
+        public Weather(Random random)
         {
+            rng = random;
             weatherConditions = new List<string>() { "Rainy", "Sunny", "Cloudy", "Overcast", "Stormy" };
             condition = GenerateCondition();
+            GenerateTemperature();
         }
 
         // member methods (CAN DO)
         public string GenerateCondition()
         {
             //set the condtion variable to a random condtion from our list of weatherCondtions
-            int randomNumber = rng.Next(6);
+            int randomNumber = rng.Next(5);
             return weatherConditions[randomNumber];
         }
 
