@@ -68,7 +68,7 @@ namespace LemonadeStand_3DayStarter
                     DisplayForecast();
                     break;
                 case "5":
-                    //StartDay(day);
+                    day.StartDay(player);
                     break;
                 case "6":
                     Environment.Exit(0);

@@ -16,6 +16,28 @@ namespace LemonadeStand_3DayStarter
             random = rng;
         }
 
+        public bool MakeBuyChoice(Weather weather, Recipe recipe)
+        {
+            int chanceNum = 0;
+            if (weather.tempurture >= 80 && recipe.pricePerCup <= 1.00)
+            {
+                chanceNum = random.Next(4, 10);
+            }
+            else if (weather.tempurture <= 80 && recipe.pricePerCup >= 1.00)
+            {
+                chanceNum = random.Next(0, 10);
+            }
+
+
+            if(chanceNum >= 5)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+        }
 
         //MakeBuyChoice(Weather weather, Recipe recipe)
 
