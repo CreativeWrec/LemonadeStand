@@ -21,6 +21,11 @@ namespace LemonadeStand_3DayStarter
             dayOfWeek = dayOfWeekPassed;
         }
 
+        public void DisplayWeather()
+        {
+            Console.WriteLine("Today's weather is " + weather.condition + "and Today's high is" + weather.tempurture);
+            Console.ReadLine();
+        }
 
         public void GenerateCustomers()
         {
@@ -35,11 +40,25 @@ namespace LemonadeStand_3DayStarter
         }
 
         public void StartDay(Player player)
-        {
+        {   
+
             foreach(Customer customer in customers)
             {
                 bool decision = customer.MakeBuyChoice(weather, player.recipe);
+                {
+                    if (decision = true)
+                    {
+                       cupsLeftInPitcher--, 
+                       priceOfCup++; 
+                    }
+                    else if (decision = false)
+                    {
+                        continue;
+                    }
+                }
+
             }
+
             //loop over the list of customers
             //inside the loop call the cusotmers MakeChoice method
             //if the method returns true, take a cup away from the cupsLeftInPitcher variable on the pitcher class and icrease the players money by the cost of a cup (pricePerCup on the recipe class)
