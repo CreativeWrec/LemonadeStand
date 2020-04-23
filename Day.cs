@@ -48,12 +48,12 @@ namespace LemonadeStand_3DayStarter
             {
                 bool decision = customer.MakeBuyChoice(weather, player.recipe);
                 {
-                    if (decision = true)
+                    if (true) 
                     {
                         cupsLeftInPitcher--; 
-                        player.wallet.pricePerCup++; 
+                        player.wallet.Money += pricePerCup; 
                     }
-                    else if (decision = false)
+                    else if (false) 
                     {
                         continue;
                     }

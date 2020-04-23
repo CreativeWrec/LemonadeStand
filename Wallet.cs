@@ -21,5 +21,10 @@
         {
             money -= transactionAmount;
         }
+
+        public void PaymentRecieved()
+        {
+            money += 
+        }
     }
 }

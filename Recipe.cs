@@ -9,15 +9,18 @@ namespace LemonadeStand_3DayStarter
     class Recipe
     {
         //Variable (Has A)
-        public int amountOfLemons;
-        public int amountOfSugarCubes;
-        public int amountOfIceCubes;
+        public double amountOfLemons;
+        public double amountOfSugarCubes;
+        public double amountOfIceCubes;
         public double pricePerCup;
         
         //Constructor
         public Recipe()
         {
-
+            this.amountOfLemons = .75;
+            this.amountOfSugarCubes = 1;
+            this.amountOfIceCubes = .50;
+            this.pricePerCup = .25;
         }
 
         //Method (Can do)
