@@ -11,6 +11,8 @@ namespace LemonadeStand_3DayStarter
         public Weather weather;
         public List<Customer> customers;
         public string dayOfWeek;
+        public Pitcher cupsLifeInPitcher;
+        public Recipe pricePerCup;
         Random rng;
 
         public Day(string dayOfWeekPassed, Random random)
@@ -39,7 +41,7 @@ namespace LemonadeStand_3DayStarter
             //in the for loop add new customer objects into the customers list like I am doing on the game class for days
         }
 
-        public void StartDay(Player player)
+        public void StartDay(Player player, int cupsLeftInPitcher)
         {   
 
             foreach(Customer customer in customers)
@@ -48,8 +50,8 @@ namespace LemonadeStand_3DayStarter
                 {
                     if (decision = true)
                     {
-                       cupsLeftInPitcher--, 
-                       priceOfCup++; 
+                        cupsLeftInPitcher--; 
+                        player.wallet.pricePerCup++; 
                     }
                     else if (decision = false)
                     {
