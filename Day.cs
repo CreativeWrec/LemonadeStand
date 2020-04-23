@@ -41,19 +41,19 @@ namespace LemonadeStand_3DayStarter
             //in the for loop add new customer objects into the customers list like I am doing on the game class for days
         }
 
-        public void StartDay(Player player, int cupsLeftInPitcher)
+        public void StartDay(Player player)
         {   
 
             foreach(Customer customer in customers)
             {
                 bool decision = customer.MakeBuyChoice(weather, player.recipe);
                 {
-                    if (true) 
+                    if (decision == true)
                     {
-                        cupsLeftInPitcher--; 
-                        player.wallet.Money += pricePerCup; 
+                        player.pitcher.cupsLeftinPitcher--;
+                        player.wallet.AddMoney(player.recipe.pricePerCup);
                     }
-                    else if (false) 
+                    else if (decision == false)
                     {
                         continue;
                     }

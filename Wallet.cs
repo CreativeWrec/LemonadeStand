@@ -22,9 +22,9 @@
             money -= transactionAmount;
         }
 
-        public void PaymentRecieved()
+        public void AddMoney(double amount)
         {
-            money += 
+            money += amount; 
         }
     }
 }
